@@ -1,0 +1,93 @@
+*,::before,::after{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    user-select: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body, html{
+    height: 100%;
+}
+
+body{
+    background-color: #FAFAFA;
+    display: grid;
+    place-items: center;
+}
+
+.calculatrice{
+    width: 330px;
+    background-color: #FFE6EA;
+    padding: 40px 30px;
+    border-radius: 30px;
+    box-shadow: -3px -3px 7px #F3CDE6, 3px 3px 5px #E9A8D3;
+}
+
+.resultat{
+    height: 60px;
+    width: 100%;
+    background-color: #FEF6FC;
+    box-shadow: inset -3px -3px 7px #F3CDE6, inset 3px 3px 5px #E9A8D3;
+}
+
+.resultat input{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    padding: 1rem;
+    color: #57534D;
+    font-size: 20px;
+    text-align: right;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    box-shadow: inset -1px -1px 7px #F3CDE6, inset 1px 1px 5px #E9A8D3;
+}
+
+.buttons{
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+input[type="button"]{
+    height: 50px;
+    width: 50px;
+    margin: 4px;
+    border-radius: 15px;
+    font-size: 23px;
+    background-color: #FF8A9D;
+    color: aliceblue;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    box-shadow: -3px -3px 7px #F3CDE6, 3px 3px 5px #E9A8D3;
+}
+
+input[name="plus"], input[name="moins"], input[name="mult"], input[name="div"], input[name="egal"] {
+    background-color: #FF5C77;
+    box-shadow: -3px -3px 7px #F3CDE6, 3px 3px 5px #E9A8D3;
+}
+
+input[name="reset"]{
+    background-color: #FF2E51;
+    box-shadow: -3px -3px 7px #F3CDE6, 3px 3px 5px #E9A8D3;
+}
+
+input[type="button"]:active{
+    box-shadow: inset -3px -3px 7px #cb80b1, inset 3px 3px 5px #bb75a4;
+}
+
+.reset{
+    width: 100%!important;
+    font-size: 18px;
+}
+
+.infos{
+    color: red;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 9px;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}

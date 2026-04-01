@@ -1,6 +1,4 @@
-/* =========================================
-   VARIABLES & BASES (TA BASE INITIALE)
-   ========================================= */
+/*couleur golbal*/
 :root {
     --bg-main: #EFEBE9;
     --bg-card: #FFFFFF;
@@ -23,9 +21,7 @@ body {
     padding-top: 80px;
 }
 
-/* =========================================
-   NAVBAR & HAMBURGER
-   ========================================= */
+/*navbar + hamburger */
 .navbar {
     display: flex;
     align-items: center;
@@ -113,9 +109,7 @@ width: 100%;
 a:hover {
 color: #E58FC8;
 }
-/* =========================================
-   DROPDOWN (MENU DÉROULANT PC)
-   ========================================= */
+/*menu réduit (déroulant) */
 .dropdown { position: relative; }
 .dropdown-menu {
     position: absolute; top: 100%; left: 0; background: white;
@@ -126,10 +120,7 @@ color: #E58FC8;
 .dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
 .dropdown-menu li { list-style: none; padding: 5px 20px; }
 
-/* =========================================
-   CONTENEURS ET SECTIONS (POUR 3 CARTES)
-   ========================================= */
-/* Modifiez ces deux sélections dans votre CSS */
+/*taille des cartes */
 .container { 
     max-width: 1100px; /* Augmenté de 1000px à 1100px */
     margin: 0 auto; 
@@ -155,9 +146,7 @@ section[id="PROJECT"]{
 h1, h2 { font-size: 2rem; margin-bottom: 20px; color: var(--text-black); }
 h3 { color: var(--accent); margin: 40px 0 20px; font-size: 1.5rem; text-align: center;}
 
-/* =========================================
-   GRILLE ET FLASH CARDS
-   ========================================= */
+/* flashcards */
 .project-grid {
     display: flex;
     flex-wrap: wrap;
@@ -229,12 +218,12 @@ background-repeat: no-repeat;
 
 /* Cible toutes les images à l'intérieur de tes flash-cards */
 .card-front img, .card-back img {
-    display: block;       /* Force l'image à se comporter comme un bloc */
-    margin-left: auto;    /* Pousse l'espace à gauche */
-    margin-right: auto;   /* Pousse l'espace à droite (résultat : centrage) */
+    display: block;      
+    margin-left: auto;    
+    margin-right: auto;   /* centrage */
     
     max-width: 100%;      /* Empêche l'image de déborder de la carte */
-    height: auto;         /* Garde les proportions */
+    height: auto;       
     
     margin-bottom: 15px;  /* Ajoute un petit espace sous l'image */
 }
@@ -248,9 +237,7 @@ background-repeat: no-repeat;
 .flash-card:hover { transform: translateY(-10px); }
 .flash-card:hover .card-front { box-shadow: var(--shadow-hover); }
 
-/* =========================================
-   BOUTONS & INFOS DANS LES CARTES
-   ========================================= */
+/* boutons + infos flashcards */
 .btn-flip {
     background: var(--accent);
     color: white;
@@ -285,19 +272,17 @@ background-repeat: no-repeat;
 
 
 
-/* =========================================
-   RESPONSIVE MOBILE (LA CORRECTION)
-   ========================================= */
+/* pour mobile */
 @media (max-width: 768px) {
-    /* 1. Afficher le bouton hamburger */
+    
     .hamburger { display: flex; }
 
-    /* 2. Transformer le menu en volet latéral */
+    
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%; /* Caché à droite */
-        width: 100%;  /* Prend tout l'écran */
+        right: -100%; 
+        width: 100%;  
         height: 100vh;
         background-color: var(--bg-nav);
         flex-direction: column;
@@ -308,12 +293,12 @@ background-repeat: no-repeat;
         gap: 25px;
     }
 
-    /* 3. Classe ajoutée par JS pour ouvrir le menu */
+    
     .nav-links.active {
         right: 0;
     }
 
-    /* 4. Animation de la croix */
+    /* animation de la croix */
     .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
@@ -331,13 +316,13 @@ background-repeat: no-repeat;
     }
     .dropdown-menu li a { color: black; font-size: 0.9rem !important; }
 
-    /* 6. Ajustement des cartes sur mobile */
+    /* ajustement des cartes sur mobile */
     .flash-card { width: 100%; height: auto; min-height: 500px; }
     .card-large { padding: 25px; }
     h1 { font-size: 1.6rem; }
 }
 
-/* Footer et divers */
+
 .back-to-top {
     position: fixed; bottom: 25px; right: 25px;
     background: var(--accent); color: white !important;

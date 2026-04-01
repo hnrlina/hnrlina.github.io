@@ -2,9 +2,9 @@
    VARIABLES & BASES (TA BASE INITIALE)
    ========================================= */
 :root {
-    --bg-main: #FAF8EF;
+    --bg-main: #EFEBE9;
     --bg-card: #FFFFFF;
-    --bg-nav: #FAF8EF;
+    --bg-nav: #EFEBE9;
     --accent: #E58FC8;
     --text-dark: #333333;
     --text-black: #000000;
@@ -142,7 +142,7 @@ section {
     width: 95%; 
 }
 section[id="PROJECT"]{
-    background-color: #FAF8EF;
+    background-color: #EFEBE9;
     box-shadow: none;
 }
 .card-large {

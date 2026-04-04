@@ -1,22 +1,25 @@
-function openModal(url) {
-    alert("Le lien cliqué est : " + url);
-    // Plus tard, ici on mettra le code pour ouvrir la vraie fenêtre
+// On récupère les éléments du curseur
+const cursor = document.getElementById('cursor');
+const trail = document.getElementById('cursor-trail');
+
+// Quand la souris bouge, on déplace les cercles
+document.addEventListener('mousemove', (e) => {
+    // Le petit point suit la souris instantanément
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+
+    // Le grand cercle suit avec un petit décalage (géré par le CSS transition)
+    trail.style.left = e.clientX + 'px';
+    trail.style.top = e.clientY + 'px';
+});
+
+// Fonction pour quitter la page quand on clique sur le bouton
+function enterPortfolio() {
+    const overlay = document.getElementById('exit-overlay');
+    if(overlay) overlay.classList.add('active');
+    
+    setTimeout(() => {
+        // "portfolio/" désigne le dossier, "portfolio.html" le fichier dedans
+        window.location.href = 'portfolio/portfolio.html'; 
+    }, 600);
 }
-
-const hamburgerBtn = document.getElementById('hamburger-btn');
-const navMenu = document.getElementById('nav-menu');
-const navLinks = document.querySelectorAll('.nav-links a');
-
-// 1. Au clic sur le bouton : on ouvre/ferme
-hamburgerBtn.addEventListener('click', () => {
-    hamburgerBtn.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// 2. Au clic sur un lien : on ferme tout et on navigue
-navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        hamburgerBtn.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});

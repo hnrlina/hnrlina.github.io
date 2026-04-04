@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./portfolio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./images/rond_rouge.png">
+    <title>Portfolio - Lina Honoré</title>
+</head> 
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo"><img src="./images/logo.png" alt="Logo"></div>
+            
+            <button class="hamburger" id="hamburger-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="nav-links" id="nav-menu">
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#ABT_ME">À propos de moi</a></li>
+                <li class="dropdown">
+                    <a href="#PROJECT">Projets</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#PERSO">Personnels</a></li>
+                        <li><a href="#SCHOOL">Scolaires</a></li>
+                    </ul>
+                </li>
+                <li><a href="#CONTACT">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="ABT_ME" class="card-large">
+            <article>
+                <h1>À propos de moi</h1>
+                <p>Je m'appelle Lina Honoré et je suis actuellement en BUT Informatique à l'IUT d'Orsay.</p>
+                <p>J'ai eu le baccalauréat général (NSI, Mathématiques) avec mention Bien en 2025.</p>
+                <p>J'ai choisi le monde de l'informatique car c'est un domaine qui me passionne. Grâce à lui je peux répondre à plein de questions que je me pose. Comment cette application fonctionne-t-elle ? <br>Comment sont gérées mes données dans les différentes institutions ? Mais surtout comment puis-je maîtriser tous ces sujets ?</p>
+                <p>Les données sont l'aspect du monde informatique qui m'intrigue le plus. C'est pourquoi je développe des projets en Python, SQL ou Java, sans pour autant délaisser le HTML (ce portfolio en est la preuve), le C++ ou le JavaScript.</p>
+            </article>
+        </section>
+
+        <section id="PROJECT" class="card-large">
+            <h2>Mes Projets</h2>
+        </section>
+
+        <div class="container">
+            <h3 id="PERSO">Projets Personnels</h3>
+            <div class="project-grid">
+                
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>Dash Board</h4>
+                            <h5>Janvier 2026</h5>
+                            <img src="images/dashboard.PNG" alt="dashboard">
+                            <div class="infos">
+                                <p>Python</p><p>CSS</p>
+                            </div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>Analyse dynamique des <strong>top ventes de livres Amazon</strong> sur 4 ans. Ce projet Python m'a permis de relever le défi du Data Cleaning pour transformer un dataset brut en indicateurs visuels.</p>
+                            <div class="card-footer">
+                                <a href="https://dashboardamazon-ty3m9qspj4ftuhwtfvxdkk.streamlit.app" target="_blank" class="btn-project">Voir le Dashboard</a>
+                                <div class="sources">
+                                    <span>Aide :</span>
+                                    <a href="https://youtu.be/D0D4Pa22iG0" target="_blank">Vidéo 1</a>, 
+                                    <a href="https://youtu.be/fThcHGiTOeQ" target="_blank">Vidéo 2</a>
+                                </div>
+                                <div class="ameliorations">
+                                    <ul>Améliorations à venir : 
+                                        <li> Trier par plusieurs auteurs ou titres </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>Calculatrice</h4>
+                            <img src="./images/image_calc.png" alt="Calculatrice" style="width:150px">
+                            <div class="infos">
+                                <p>HTML</p><p>CSS</p><p>JavaScript</p>
+                            </div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>J'ai réalisé une calculatrice à l'aide de HTML, CSS et JavaScript. Cela a été amusant et m'a permis d'apprendre quelques bases en JS.</p>
+                            <div class="card-footer">
+                                <a href="./calculatrice/calculatrice.html" class="btn-project">Tester</a>
+                                <div class="sources">
+                                    <span>Aide :</span>
+                                    <a href="https://youtu.be/WfFWiy2Xu3M" target="_blank">Vidéo 1</a>
+                                </div>
+                                <div class="ameliorations">
+                                    <ul>Améliorations à venir : 
+                                        <li> Ajouter racine carrée </li>
+                                        <li> Parenthèses pour la priorité </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>Snake</h4>
+                            <h5>Février 2026</h5>
+                            <img src="images/GAMEOVER.png" alt="Snake" style="width:250px;"> 
+                            <div class="infos">
+                                <p>JAVA</p>
+                            </div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>Pour me familiariser avec le JAVA avant le début de mon S2 j'ai décidé de reproduire l'incontournable jeu du serpent mangeur de pommes.</p>
+                            <div class="card-footer">
+                                <a href="https://github.com/hnrlina/java-snake-game" target="_blank" class="btn-project">Code Source</a>
+                                <div class="sources">
+                                    <span>Aide :</span>
+                                    <a href="https://www.youtube.com/watch?v=bI6e6qjJ8JQ" target="_blank">Vidéo</a> 
+                                </div>
+                                <div class="ameliorations">
+                                    <ul>Améliorations à venir : 
+                                        <li> Travail sur le design du serpent </li>
+                                        <li> Faire apparaître plusieurs pommes </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>GhibList</h4>
+                            <h5>Mars 2026</h5>
+                           <img src="images/PreviewToDo.png" alt="Preview to do list" style="width: 1000px;">
+                            <div class="infos">
+                                <p>HTML</p><p>CSS</p><p>JavaScript</p>
+                            </div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>J'aime beaucoup m'organiser et je voulais une to do list qui me corresponde, alors en faire une sur le thème de studio ghibli était un choix parfait.<br/> Elle a pour fonctionnalité d'ajouter et supprimer des tâches, d'en marquer comme terminer et elle a une barre du progression.</p>
+                            <div class="card-footer">
+                                <a href="https://hnrlina.github.io/ghiblist/" class="btn-project">Faites votre liste</a>
+                                <div class="sources">
+                                    <span>Aide :</span>
+                                    <a href="https://www.youtube.com/watch?v=G0jO8kUrg-I&t=133s" target="_blank">Vidéo</a>
+                                </div>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>LinaBrain</h4>
+                            <h5>En cours</h5>
+                            <img src="images/pinkrobot.png" alt="Snake" style="width:250px;"> 
+                            <div class="infos">
+                                <p>Python</p>
+                            </div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>Création d'un modèle de langage spécialisé par Transfer Learning.</p>
+                            <div class="card-footer">
+                                <a href="" target="_blank" class="btn-project">À venir</a>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3 id="SCHOOL">Projets Scolaires</h3>
+            <div class="project-grid">
+                
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>Jeu 2D C++</h4>
+                            <h5>Janvier 2026</h5>
+                            <img src="images/logo.png" alt="C++" style="width:100px;">
+                            <div class="infos"><p>C++</p></div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>Développement d'un jeu en C++ utilisant des concepts de programmation orientée objet appris en cours.</p>
+                            <div class="card-footer">
+                                <a href="https://github.com/hnrlina/MonJeuSDL2" class="btn-project">En savoir plus</a>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="flash-card">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <h4>BDD Fast-Food</h4>
+                            <h5>Janvier 2026</h5>
+                            <img src="images/bdd.png" alt="SQL" style="width:250px;"> 
+                            <div class="infos"><p>SQLite</p></div>
+                            <button class="btn-flip">Voir plus</button>
+                        </div>
+                        <div class="card-back">
+                            <p>Conception et implémentation d'une base de données relationnelle SQL.</p>
+                            <div class="card-footer">
+                                <a href="https://github.com/hnrlina/BDD-FastFood/" class="btn-project">En savoir plus</a>
+                            </div>
+                            <button class="btn-flip back">Retour</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+
+        <section id="CONTACT" class="card-large">
+            <h1>Contact</h1>
+            <p><strong>Mail :</strong> linahonore95@gmail.com</p>
+            <p><strong>Tel :</strong> 07 62 17 59 09</p>
+            <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/lina-honoré-961589383" target="_blank">Mon profil</a></p>
+            <p><strong>GitHub :</strong> <a href="https://github.com/hnrlina" target="_blank">Mon profil</a></p>
+        </section>
+
+        <a href="#" class="back-to-top">↑</a>    
+    </main>
+
+    <script>
+        // --- GESTION DES FLIP CARDS ---
+        document.querySelectorAll('.btn-flip').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation(); 
+                this.closest('.flash-card').classList.toggle('is-flipped');
+            });
+        });
+
+        // --- GESTION DU MENU MOBILE ---
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

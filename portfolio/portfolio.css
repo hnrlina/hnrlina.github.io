@@ -1,0 +1,333 @@
+/*couleur golbal*/
+:root {
+    --bg-main: #EFEBE9;
+    --bg-card: #FFFFFF;
+    --bg-nav: #EFEBE9;
+    --accent: #E58FC8;
+    --text-dark: #333333;
+    --text-black: #000000;
+    --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.05);
+    --shadow-hover: 0 15px 35px rgba(229, 143, 200, 0.2);
+    --transition: all 0.3s ease;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+    background-color: var(--bg-main); 
+    font-family: 'Poppins', sans-serif; 
+    color: var(--text-dark); 
+    line-height: 1.6;
+    padding-top: 80px;
+}
+
+/*navbar + hamburger */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--bg-nav);
+    padding: 10px 5%;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.logo img { height: 50px; }
+
+.nav-links { display: flex; list-style: none; gap: 40px; }
+
+.nav-links a {
+    text-decoration: none !important;
+    color: inherit;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s;
+}
+
+/* Animation soulignement liens */
+.nav-links a:not(.btn-project)::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--accent);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* Style du bouton Hamburger (Caché sur PC) */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 2000;
+}
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+a {
+text-decoration: none !important;
+color: inherit;
+position: relative;
+transition: color 0.3s;
+}
+
+a:not(.back-to-top):not(.btn-project)::after {
+content: '';
+display: block;
+width: 0;
+height: 2px;
+background: #E58FC8;
+transition: width 0.3s;
+position: absolute;
+bottom: -2px;
+left: 0;
+}
+
+a:not(.back-to-top):not(.btn-project):hover::after {
+width: 100%;
+}
+
+a:hover {
+color: #E58FC8;
+}
+/*menu réduit (déroulant) */
+.dropdown { position: relative; }
+.dropdown-menu {
+    position: absolute; top: 100%; left: 0; background: white;
+    min-width: 160px; padding: 10px 0; border-radius: 8px;
+    box-shadow: var(--shadow-soft); opacity: 0; visibility: hidden;
+    transform: translateY(10px); transition: var(--transition);
+}
+.dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+.dropdown-menu li { list-style: none; padding: 5px 20px; }
+
+/*taille des cartes */
+.container { 
+    max-width: 1100px; /* Augmenté de 1000px à 1100px */
+    margin: 0 auto; 
+    width: 95%; 
+}
+
+section { 
+    max-width: 1100px; /* Augmenté de 1000px à 1100px */
+    margin: 50px auto; 
+    width: 95%; 
+}
+section[id="PROJECT"]{
+    background-color: #EFEBE9;
+    box-shadow: none;
+}
+.card-large {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 25px;
+    box-shadow: var(--shadow-soft);
+}
+
+h1, h2 { font-size: 2rem; margin-bottom: 20px; color: var(--text-black); }
+h3 { color: var(--accent); margin: 40px 0 20px; font-size: 1.5rem; text-align: center;}
+
+/* flashcards */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.flash-card {
+    width: 320px; /* Taille pour 3 cartes sur 1100px */
+    height: 520px; 
+    perspective: 1000px;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flash-card.is-flipped .card-inner { transform: rotateY(180deg); }
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #FFFFFF;
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ameliorations {
+margin-top: 20px;
+padding-top: 20px;
+border-top: 1px solid #F5F5F5;
+}
+
+.ameliorations li {
+font-size: 0.80rem;
+list-style-type: none;
+position: relative;
+padding-left: 20px;
+margin-bottom: 5px;
+text-align: left;
+}
+
+.ameliorations li::before {
+content: "";
+position: absolute;
+left: 0;
+top: 50%;
+transform: translateY(-50%);
+width: 15px;
+height: 15px;
+background-image: url("images/rond_rose.png");
+background-size: contain;
+background-repeat: no-repeat;
+}
+
+/* Cible toutes les images à l'intérieur de tes flash-cards */
+.card-front img, .card-back img {
+    display: block;      
+    margin-left: auto;    
+    margin-right: auto;   /* centrage */
+    
+    max-width: 100%;      /* Empêche l'image de déborder de la carte */
+    height: auto;       
+    
+    margin-bottom: 15px;  /* Ajoute un petit espace sous l'image */
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: #FFF9FC; 
+    overflow-y: auto; 
+}
+
+.flash-card:hover { transform: translateY(-10px); }
+.flash-card:hover .card-front { box-shadow: var(--shadow-hover); }
+
+/* boutons + infos flashcards */
+.btn-flip {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    align-self: center;
+    transition: var(--transition);
+}
+
+.infos { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 10px 0; }
+.infos p {
+    background-color: rgba(229, 143, 200, 0.1); 
+    color: var(--accent);       
+    padding: 4px 10px;          
+    border-radius: 8px;         
+    font-size: 0.75rem;          
+    font-weight: 600;           
+}
+
+.btn-project {
+    display: inline-block;
+    background: var(--accent);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+
+
+/* pour mobile */
+@media (max-width: 768px) {
+    
+    .hamburger { display: flex; }
+
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; 
+        width: 100%;  
+        height: 100vh;
+        background-color: var(--bg-nav);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1500;
+        gap: 25px;
+    }
+
+    
+    .nav-links.active {
+        right: 0;
+    }
+
+    /* animation de la croix */
+    .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+
+    /* 5. Affichage des sous-menus en mobile */
+    .dropdown-menu {
+        display: block !important;
+        position: static !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        box-shadow: none !important;
+        text-align: center;
+        padding: 0 !important;
+        transform: none !important;
+    }
+    .dropdown-menu li a { color: black; font-size: 0.9rem !important; }
+
+    /* ajustement des cartes sur mobile */
+    .flash-card { width: 100%; height: auto; min-height: 500px; }
+    .card-large { padding: 25px; }
+    h1 { font-size: 1.6rem; }
+}
+
+
+.back-to-top {
+    position: fixed; bottom: 25px; right: 25px;
+    background: var(--accent); color: white !important;
+    width: 45px; height: 45px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 5px 15px rgba(229, 143, 200, 0.4);
+    z-index: 1000;
+}

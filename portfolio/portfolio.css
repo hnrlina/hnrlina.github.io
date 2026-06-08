@@ -199,6 +199,7 @@ font-size: 0.80rem;
 list-style-type: none;
 position: relative;
 padding-left: 20px;
+background-image: url("images/rond_rose.png");
 margin-bottom: 5px;
 text-align: left;
 }

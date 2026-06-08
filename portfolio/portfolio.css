@@ -145,6 +145,11 @@ section[id="PROJECT"]{
 
 h1, h2 { font-size: 2rem; margin-bottom: 20px; color: var(--text-black); }
 h3 { color: var(--accent); margin: 40px 0 20px; font-size: 1.5rem; text-align: center;}
+.competences h3 {
+    text-align: left;
+    margin: 30px 0 15px;
+    color: var(--accent);
+}
 
 /* flashcards */
 .project-grid {

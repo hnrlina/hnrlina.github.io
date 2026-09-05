@@ -4,6 +4,7 @@
     --bg-card: #FFFFFF;
     --bg-nav: #EFEBE9;
     --accent: #E58FC8;
+    --darkpink: #E773C3;
     --text-dark: #333333;
     --text-black: #000000;
     --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.05);
@@ -150,6 +151,9 @@ h3 { color: var(--accent); margin: 40px 0 20px; font-size: 1.5rem; text-align: c
     margin: 30px 0 15px;
     color: var(--accent);
 }
+
+h6{font-size: 1rem; margin-bottom: 20px; color: var(--darkpink);}
+h7{font-size: 1.3rem; margin-bottom: 20px; color: var(--text-black); font-weight: bold;}
 
 /* flashcards */
 .project-grid {

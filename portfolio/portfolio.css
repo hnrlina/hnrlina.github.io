@@ -342,40 +342,4 @@ background-repeat: no-repeat;
     z-index: 1000;
 }
 
-#cursor {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    background: pink;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-}
 
-#cursor-trail {
-    position: fixed;
-    width: 30px;
-    height: 30px;
-    border: 2px solid var(--accent);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: all 0.1s ease;
-    z-index: 9998;
-}
-
-/* sur ordinateur */
-@media (min-width: 769px) {
-    body {
-        cursor: none;
-    }
-}
-
-/* sur téléphone et tablette */
-@media (max-width: 768px) {
-    #cursor,
-    #cursor-trail {
-        display: none;
-    }
-}

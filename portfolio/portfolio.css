@@ -20,7 +20,6 @@ body {
     color: var(--text-dark); 
     line-height: 1.6;
     padding-top: 80px;
-    cursor: none;
 }
 
 /*navbar + hamburger */
@@ -364,4 +363,19 @@ background-repeat: no-repeat;
     transform: translate(-50%, -50%);
     transition: all 0.1s ease;
     z-index: 9998;
+}
+
+/* sur ordinateur */
+@media (min-width: 769px) {
+    body {
+        cursor: none;
+    }
+}
+
+/* sur téléphone et tablette */
+@media (max-width: 768px) {
+    #cursor,
+    #cursor-trail {
+        display: none;
+    }
 }
